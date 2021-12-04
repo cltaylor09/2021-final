@@ -1,0 +1,65 @@
+@media (min-width: 576px) {
+    .indexPage {
+        margin: auto;
+        text-align: center;
+    }
+
+    .servicesPage {
+        margin: auto;
+        text-align: center;
+    }
+
+    .pricingPage {
+        margin: auto;
+        text-align: center;
+    }
+
+    .bookingPage {
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .indexPage {
+        margin: auto;
+        text-align: center;
+    }
+
+    .servicesPage {
+        margin: auto;
+        text-align: center;
+    }
+
+    .pricingPage {
+        margin: auto;
+        text-align: center;
+    }
+
+    .bookingPage {
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .indexPage {
+        margin: auto;
+        text-align: center;
+    }
+
+    .servicesPage {
+        margin: auto;
+        text-align: center;
+    }
+
+    .pricingPage {
+        margin: auto;
+        text-align: center;
+    }
+
+    .bookingPage {
+        margin: auto;
+        text-align: center;
+    }
+}
