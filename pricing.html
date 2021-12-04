@@ -66,9 +66,9 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body text-start">Package and price breakdown:
                   <ul>
-                    <li>5 large photos, 3 medium photos, and 5 small photos = $50</li>
-                    <li>10 large photos, 5 medium photos, and 7 small photos = $100</li>
-                    <li>20 large photos, 10 medium photos, and 15 small photos = $200</li>
+                    <li><strong>Package 1:</strong> 5 large photos, 3 medium photos, and 5 small photos - $50</li>
+                    <li><strong>Package 2:</strong> 10 large photos, 5 medium photos, and 7 small photos - $100</li>
+                    <li><strong>Package 3:</strong> 20 large photos, 10 medium photos, and 15 small photos - $200</li>
                   </ul>
                 </div>
               </div>
@@ -84,9 +84,9 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body text-start">Package and price breakdown:
                   <ul>
-                    <li>5 large photos and 3 medium photos = $35</li>
-                    <li>7 large photos, 5 medium photos, and 3 small photos = $115</li>
-                    <li>12 large photos, 10 medium photos, and 7 small photos = $175</li>
+                    <li><strong>Package 1:</strong> 5 large photos and 3 medium photos - $35</li>
+                    <li><strong>Package 2:</strong> 7 large photos, 5 medium photos, and 3 small photos - $115</li>
+                    <li><strong>Package 3: </strong>12 large photos, 10 medium photos, and 7 small photos - $175</li>
                   </ul>
                   <p>We also do custom maternity packages starting at $150.</p>
                 </div>
@@ -103,9 +103,9 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body text-start">Package and price breakdown:
                   <ul>
-                    <li>3 large photos, 3 medium photos, and 3 small photos = $65</li>
-                    <li>5 large photos, 5 medium photos, and 3 small photos = $95</li>
-                    <li>7 large photos, 7 medium photos, and 7 small photos = $150</li>
+                    <li><strong>Package 1:</strong> 3 large photos, 3 medium photos, and 3 small photos - $65</li>
+                    <li><strong>Package 2:</strong> 5 large photos, 5 medium photos, and 3 small photos - $95</li>
+                    <li><strong>Package 3:</strong> 7 large photos, 7 medium photos, and 7 small photos - $150</li>
                   </ul>
                 </div>
               </div>
@@ -115,10 +115,50 @@
       </div>
     </div>
 
-    <div class="container m-3">
-
+    <div class="container m-5 mb-5">
+      <div class="text-start">
+      <h2>Price calculator:</h2>
+      <div class="mb-3">
+        <form class="was-validated">
+        <label class="form-label">Session type: </label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>--</option>
+          <option value="1">Family Portraits</option>
+          <option value="2">Maternity Portraits</option>
+          <option value="3">Newborn Portraits</option>
+        </select>
       
+      <div class="form-check mt-3">
+        <input class="form-check-input" type="checkbox" value="option1" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Package 1
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="option2" id="flexCheckDefault2">
+        <label class="form-check-label" for="flexCheckDefault2">
+          Package 2
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="option3" id="flexCheckDefault3">
+        <label class="form-check-label" for="flexCheckDefault3">
+          Package 3
+        </label>
+      </div>
+      <div class="container mt-3">
+        <div class="input-group">
+          <span class="input-group-text">Comments</span>
+          <textarea class="form-control" aria-label="Comments"></textarea>
+        </div>
+        <div class="container mt-3 text-center">
+        <button type="submit" id="mySubmit" value="Submit" class="btn btn-primary">Submit</button>
+      </div>
+      </div>
+    </form>
     </div>
+  </div>
+</div>
   </main>
 
   <footer class="container">
