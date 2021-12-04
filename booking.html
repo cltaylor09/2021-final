@@ -60,7 +60,7 @@
           <input type="email" class="form-control" name="emailField" id="emailField" required>
         </div>
         <div class="mb-3">
-          <label class="form-label">Session type: </label>
+          <label class="form-label">* Session type: </label>
           <select class="form-select" required aria-label="Default select example">
             <option value="">Choose one...</option>
             <option value="1">Family Portraits</option>
@@ -69,16 +69,18 @@
           </select>
         </div>
         <div class="mb-3">
-          <label for="dateField" class="form-label">Booking Date: </label>
+          <label for="dateField" class="form-label">* Booking Date: </label>
           <input type="date" class="form-control" name="dateField" id="dateField" required>
         </div>
-        </form>
-        <form>
+      </form>
+      <form>
         <div class="mb-3">
           <label for="commentsField" class="form-label"> Comments: </label>
           <textarea id="commentsField" class="form-control" name="commentsField" rows="2" cols="20"></textarea>
         </div>
+        <div class="mb-3">
         <button type="submit" id="mySubmit" value="Submit" class="btn btn-primary">Submit</button>
+      </div>
       </form>
     </div>
   </main>
