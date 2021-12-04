@@ -84,11 +84,10 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body text-start">Package and price breakdown:
                   <ul>
-                    <li><strong>Package 1:</strong> 5 large photos and 3 medium photos - $35</li>
-                    <li><strong>Package 2:</strong> 7 large photos, 5 medium photos, and 3 small photos - $115</li>
-                    <li><strong>Package 3: </strong>12 large photos, 10 medium photos, and 7 small photos - $175</li>
+                    <li><strong>Package 1:</strong> 5 large photos and 7 medium photos - $50</li>
+                    <li><strong>Package 2:</strong> 7 large photos, 5 medium photos, and 3 small photos - $100</li>
+                    <li><strong>Package 3: </strong>12 large photos, 10 medium photos, and 7 small photos - $200</li>
                   </ul>
-                  <p>We also do custom maternity packages starting at $150.</p>
                 </div>
               </div>
             </div>
@@ -103,9 +102,9 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body text-start">Package and price breakdown:
                   <ul>
-                    <li><strong>Package 1:</strong> 3 large photos, 3 medium photos, and 3 small photos - $65</li>
-                    <li><strong>Package 2:</strong> 5 large photos, 5 medium photos, and 3 small photos - $95</li>
-                    <li><strong>Package 3:</strong> 7 large photos, 7 medium photos, and 7 small photos - $150</li>
+                    <li><strong>Package 1:</strong> 3 large photos, 3 medium photos, and 3 small photos - $50</li>
+                    <li><strong>Package 2:</strong> 5 large photos, 5 medium photos, and 3 small photos - $100</li>
+                    <li><strong>Package 3:</strong> 7 large photos, 7 medium photos, and 7 small photos - $200</li>
                   </ul>
                 </div>
               </div>
@@ -119,21 +118,22 @@
       <div class="text-start">
         <h2>Price calculator:</h2>
         <div class="mb-3">
-          <form class="was-validated">
-            <label class="form-label">Session type: </label>
-            <select class="form-select" required aria-label="Default select example">
+
+          <form class="was-validated" id="packageForm">
+            <label class="form-label">Package type: </label>
+            <select class="form-select" required aria-label="Default select example" id="packages">
               <option value="">Choose one...</option>
-              <option value="1">Family Portraits</option>
-              <option value="2">Maternity Portraits</option>
-              <option value="3">Newborn Portraits</option>
+              <option value="1">Package 1</option>
+              <option value="2">Package 2</option>
+              <option value="3">Package 3</option>
             </select>
-            <div class="invalid-feedback">Must select a session type</div>
+            <div class="invalid-feedback">Must select a package type</div>
 
             <div class="input-group mt-4 mb-3">
-              <span class="input-group-text" id="basic-addon1">Package #</span>
-              <input type="text" class="form-control" placeholder="Example: 1" aria-label="Username"
+              <span class="input-group-text" id="basic-addon1">Session type</span>
+              <input type="text" class="form-control" placeholder="Example: Family" aria-label="Username"
                 aria-describedby="basic-addon1" required>
-              <div class="invalid-feedback">Must enter a package number</div>
+              <div class="invalid-feedback">Must enter a session type.</div>
             </div>
 
             <div class="form-check mt-4 mb-3">
@@ -146,8 +146,38 @@
           </form>
 
           <div class="container mt-3 text-center">
-            <button type="submit" id="mySubmit" value="Submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="mySubmit" value="Submit" class="btn btn-primary" onclick="getTotal()">Submit</button>
           </div>
+
+          <div id="totalPrice"></div>
+
+          <script>
+
+            var theForm = document.forms["packageForm"];
+
+            var package_prices = new Array();
+            package_prices["1"] = 50;
+            package_prices["2"] = 100;
+            package_prices["3"] = 200;
+
+            function getPackagePrice() {
+              var packagePrice = 0;
+              var theForm = document.forms["packageForm"];
+              var selectedPackage = theForm.elements["packages"];
+
+              packagePrice = package_prices[selectedPackage.value];
+
+              return packagePrice;
+            }
+
+            function getTotal() {
+              var packageTotal = getPackagePrice();
+
+              document.getElementById('totalPrice').innerHTML = "Total price $" + packageTotal;
+            }
+
+          </script>
+
         </div>
       </div>
     </div>
